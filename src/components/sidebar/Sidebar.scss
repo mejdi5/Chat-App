@@ -1,0 +1,121 @@
+.sidebar {
+    width: 25%;
+    background-color: rgb(47, 79, 128);
+    display: flex;
+    flex-direction: column;
+
+    .top {
+        height: 20%;
+
+        .header {
+            height: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(47, 79, 128);
+            gap: 15px;
+
+            img {
+                width: 40px;
+                height: 40px;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+
+            .name {
+                font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 25px;
+                font-weight: bold;
+            }
+        }
+
+        .search {
+            height: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            input {
+                background-color: rgb(92, 113, 145);
+                padding: 7px;
+                height: calc(100% - 5px);
+                width: calc(100% - 5px);
+                border: none;
+                outline: none;
+                color: white;
+                font-size: 15px;
+                &::placeholder {
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .bottom {
+        height: 80%;
+        background-color: rgb(92, 113, 145);
+        border-top: 1px white solid;
+
+        ul {
+            list-style: none;
+            height: 100%;
+            width: 100%;
+            margin-top: 0;
+            padding: 0px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            &::-webkit-scrollbar {
+                width: 10px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: rgb(79, 76, 76); 
+            }
+
+            li {
+                width: calc(100% - 15px);
+                height: 10%;
+                margin: 5px;
+                padding: 5px;
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                cursor: pointer;
+                &:hover {
+                    background-color: grey;
+                }
+
+                img {
+                    width: 40px;
+                    height: 40px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+
+                div {
+                    height: 100%;
+                    width: calc(100% - 50px);
+                    padding: 5px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    p {
+                        margin: 5px 0px;
+                    }
+
+                    .name {
+                        font-weight: bold;
+                        font-size: 20px;
+                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    }
+
+                    .message {
+                        font-family: serif;
+                    }
+                }
+            }
+        }
+    }
+}

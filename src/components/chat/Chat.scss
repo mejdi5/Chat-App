@@ -1,0 +1,109 @@
+.chat {
+    width: 75%;
+
+    .top {
+        background-color: rgb(18, 51, 101);
+        height: 11.2%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+        img {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        span {
+            font-weight: bold;
+            font-size: 25px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white
+        }
+    }
+
+    .center {
+        height: 75%;
+    }
+
+    .bottom {
+        height: 15%;
+        padding: 0px 5px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+
+        img {
+            height: 50px;
+            width: 70px;
+            object-fit: cover;
+            position: absolute;
+            left: 75%;
+            cursor: pointer;
+        }
+
+        .uploading {
+            position: absolute;
+            left: 65%;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .progress {
+            position: absolute;
+            left: 75%;
+            width: 70px;
+            border: 1px solid black;
+
+            .percentage {
+                background-color: tomato;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        input {
+            height: 60px;
+            width: 85%;
+            background-color: lightgrey;
+            border:none;
+            outline: none;
+            border-radius: 5px;
+            padding: 5px;
+            margin-bottom: 5px;
+            font-size: 20px;
+        }
+
+        .attach {
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            
+            &:hover {
+                color: grey
+            }
+
+            input {
+                display: none;
+            }
+
+            label {
+                cursor: pointer;
+            }
+        }
+
+        button {
+            height: 60px;
+            width: 8%;
+            margin-bottom: 5px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    }
+}

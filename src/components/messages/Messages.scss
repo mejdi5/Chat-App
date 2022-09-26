@@ -1,0 +1,101 @@
+.messages {
+    background-color: lightgrey;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: rgb(79, 76, 76); 
+    }
+
+    .sentMessage {
+        width: 50%;
+        margin: 10px;
+        padding: 5px;
+        display: flex;
+        gap: 10px;
+        
+        img {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .content {
+            max-width: calc(100% - 160px);
+            cursor: pointer;
+
+            p {
+                padding: 5px;
+                background-color: rgb(75, 75, 193);
+                color: white;
+                border-radius: 5px;
+                word-break: break-all;
+                width: fit-content
+            }
+
+            img {
+                height: fit-content;
+                width: 100%;
+                object-fit: contain;
+                border-radius: 0%;
+            }
+        }
+
+        small {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: grey;
+        }
+    }
+
+    .receivedMessage {
+        width: 50%;
+        margin: 10px;
+        padding: 5px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-self: flex-end;
+        gap: 10px;
+        
+        img {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .content {
+            max-width: calc(100% - 160px);
+
+            p {
+                padding: 5px;
+                background-color: white;
+                color: black;
+                border-radius: 5px;
+                word-break: break-all;
+            }
+
+            img {
+                height: fit-content;
+                width: 100%;
+                object-fit: contain;
+                border-radius: 0%;
+            }
+        }
+
+        small {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: grey;
+        }
+    }
+}
