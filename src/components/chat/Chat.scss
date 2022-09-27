@@ -107,3 +107,61 @@
         }
     }
 }
+
+@media (max-device-width: 480px) {
+    .chat {
+        .top {
+            gap: 50px;
+            img {
+                width: 70px;
+                height: 70px;
+            }
+    
+            span {
+                font-size: 40px;
+            }
+        }
+
+        .bottom {
+
+            img {
+                height: 75px;
+                width: 100px;
+                object-fit: cover;
+                left: 65%;
+            }
+    
+            .uploading {
+                left: 55%;
+                font-size: 20px;
+            }
+    
+            .progress {
+                left: 70%;
+                width: 60px;
+                height: 30px;
+
+                .percentage {
+                    height: 100%;
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+            }
+
+            input {
+                font-size: 35px; 
+            }
+
+            .attach {
+                font-size: 40px;
+            }
+
+            button {
+                margin-right: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}

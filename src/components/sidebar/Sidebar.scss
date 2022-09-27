@@ -119,3 +119,49 @@
         }
     }
 }
+
+@media (max-device-width: 480px) {
+    .sidebar {
+        .top {
+            .header {
+                gap: 25px;
+
+                img {
+                    width: 80px;
+                    height: 80px
+                }
+
+                .name {
+                    font-size: 35px;
+                }
+            }
+            .search {
+                input {
+                    font-size: 30px;
+                }
+            }
+        }
+
+        .bottom {
+            ul {
+                li{
+                    img {
+                        width: 60px;
+                        height: 60px
+                    }
+
+                    div {
+                        .name {
+                            font-size: 30px;
+                        }
+
+                        .message {
+                            font-size: 25px;
+                            opacity: 0.5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

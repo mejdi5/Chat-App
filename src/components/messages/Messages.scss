@@ -13,7 +13,7 @@
         background: rgb(79, 76, 76); 
     }
 
-    .sentMessage {
+    .sentMessage, .receivedMessage {
         width: 50%;
         margin: 10px;
         padding: 5px;
@@ -36,7 +36,7 @@
                 background-color: rgb(75, 75, 193);
                 color: white;
                 border-radius: 5px;
-                word-break: break-all;
+                word-break: break-all; 
                 width: fit-content
             }
 
@@ -57,45 +57,37 @@
     }
 
     .receivedMessage {
-        width: 50%;
-        margin: 10px;
-        padding: 5px;
-        display: flex;
         flex-direction: row-reverse;
         align-self: flex-end;
-        gap: 10px;
-        
-        img {
-            width: 40px;
-            height: 40px;
-            object-fit: cover;
-            border-radius: 50%;
-        }
+    }
+}
 
-        .content {
-            max-width: calc(100% - 160px);
-
-            p {
-                padding: 5px;
-                background-color: white;
-                color: black;
-                border-radius: 5px;
-                word-break: break-all;
-            }
-
+@media (max-device-width: 480px) {
+    .messages {
+        gap: 30px;
+        .sentMessage, .receivedMessage {
+            width: 90%;
             img {
-                height: fit-content;
-                width: 100%;
-                object-fit: contain;
-                border-radius: 0%;
+                width: 70px;
+                height: 70px;
             }
-        }
 
-        small {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: grey;
+            .content {
+                p {
+                    font-size: 35px;
+                }
+    
+                img {
+                    height: fit-content;
+                    width: 100%;
+                    object-fit: contain;
+                    border-radius: 0%;
+                }
+            }
+
+            small {
+                font-size: 30px;
+            }
         }
     }
 }

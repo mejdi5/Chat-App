@@ -8,9 +8,10 @@ const Sidebar = ({setCurrentChat}) => {
   const user = useContext(AuthContext)
   const [search, setSearch] = useState("")
 
+  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|OperaMini/i.test(navigator.userAgent)
 
 return (
-<div className='sidebar'>
+<div className='sidebar'> 
   <div className="top">
     <div className="header">
       <img 
@@ -41,7 +42,12 @@ return (
           alt=""
           />
           <div>
-            <p className="name">{person.name}</p>
+            <p className="name">
+              {(!isMobile || person.name.length < 6)
+              ? person.name 
+              : `${person.name.slice(0,6)}..`
+              }
+            </p>
             {chat?.messages &&
             <p className="message">{chat?.messages[chat?.messages?.length - 1]?.text || ""}</p>}
           </div>

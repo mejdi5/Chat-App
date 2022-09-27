@@ -8,7 +8,7 @@ import { arrayUnion, doc, updateDoc } from "firebase/firestore";
 import { AuthContext } from '../../context/AuthContext';
 
 
-const Chat = ({currentChat}) => {
+const Chat = ({currentChat}) => { 
 
   const [text, setText] = useState(null)
   const [image, setImage] = useState(null)

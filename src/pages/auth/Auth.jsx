@@ -94,7 +94,7 @@ const Auth = ({setLoading}) => {
         } catch (err) {
             setLoading(false)
             setError(err.message)
-            setTimeout(() => setError(null), 3000)
+            setTimeout(() => setError(null), 3000) 
         }
     }
 
@@ -155,7 +155,7 @@ return (
             :
             <div className='rightContainer'>
                 <div className="formWrapper">
-                    <h2>SIGN Up</h2>
+                    <h2>SIGN UP</h2>
                     <form onSubmit={handleRegister}>
                         <input
                         type="text"
