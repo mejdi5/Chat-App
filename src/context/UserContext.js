@@ -12,7 +12,7 @@ export const UserContextProvider = ({children}) => {
         const getUsers = async () => {
         const querySnapshot = await getDocs(collection(db, "users"));
         querySnapshot.forEach((doc) => {
-            setUsers(prev => [...prev, {id: doc.id, ...doc.data()}])
+            setUsers(prev => !prev.some(user => user.id === doc.id) ? [...prev, {id: doc.id, ...doc.data()}] : prev)
         });
         }
         return () => {

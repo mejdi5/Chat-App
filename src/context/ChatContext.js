@@ -11,7 +11,7 @@ export const UserChatContextProvider = ({children}) => {
     const user = useContext(AuthContext)
     const users = useContext(UserContext)
 
-    console.log(userChats)
+    //console.log(userChats)
     
     useEffect(() => {
         const setChats = async () => {
