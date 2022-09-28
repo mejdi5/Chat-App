@@ -10,10 +10,12 @@ export const UserChatContextProvider = ({children}) => {
     const [userChats, setUserChats] = useState([])
     const user = useContext(AuthContext)
     const users = useContext(UserContext)
+
+    console.log(userChats)
     
     useEffect(() => {
-        const setChats = () => {
-            users.filter(u => u.id !== user.id).map(async u => {
+        const setChats = async () => {
+            await users.filter(u => u.id !== user.id).map(async u => {
                 if(userChats.map(chat => chat.chatId).every(id => !id.includes(`${u.id}`))) {
                 const chatId = user.id > u.id ? `${user.id}${u.id}` : `${u.id}${user.id}`
                 await setDoc(doc(db, "chats", chatId), {

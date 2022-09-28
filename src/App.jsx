@@ -30,12 +30,12 @@ return (
           </UserChatContextProvider>
         </UserContextProvider> 
         : loading
-        ? <Loading AuthContext={AuthContext}/>
+        ? <Loading/>
         : <Navigate to="/auth"/>
         }/>
       <Route path="/auth" element={
         loading
-        ? <Loading AuthContext={AuthContext}/>
+        ? <Loading/>
         : !user 
         ? <Auth setLoading={setLoading}/>
         : <Navigate to="/"/>

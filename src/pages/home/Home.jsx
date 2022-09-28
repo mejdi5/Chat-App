@@ -1,17 +1,15 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { signOut } from 'firebase/auth'
 import { firebaseAuth } from '../../firebase'
 import './Home.scss'
 import Sidebar from '../../components/sidebar/Sidebar'
 import Chat from '../../components/chat/Chat'
-import { UserContext } from '../../context/UserContext'
 import { onSnapshot, doc } from "firebase/firestore"
 import { db } from '../../firebase'
 
 
 const Home = () => {
 
-  const users = useContext(UserContext)
   const [currentChat, setCurrentChat] = useState(null)
 
 
