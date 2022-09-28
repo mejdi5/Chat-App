@@ -6,6 +6,7 @@ export const UserContext = createContext()
 
 export const UserContextProvider = ({children}) => {
     const [users, setUsers] = useState([])
+    console.log(users)
     
     useEffect(() => {
         const getUsers = async () => {
