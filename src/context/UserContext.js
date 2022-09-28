@@ -15,9 +15,7 @@ export const UserContextProvider = ({children}) => {
             setUsers(prev => !prev.some(user => user.id === doc.id) ? [...prev, {id: doc.id, ...doc.data()}] : prev)
         });
         }
-        return () => {
         getUsers()
-        }
     }, [])
 
 return (
